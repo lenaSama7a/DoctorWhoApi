@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DirectedGraph GraphDirection="LeftToRight" xmlns="http://schemas.microsoft.com/vs/2009/dgml">
+  <Nodes>
+<Node Id="IModel" Label="DoctorWhoCoreDbContext" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot" PropertyAccessMode="PropertyAccessMode.Default" ProductVersion="7.0.2" Annotations="BaseTypeDiscoveryConvention:DerivedTypes: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.List`1[Microsoft.EntityFrameworkCore.Metadata.IConventionEntityType]]
+Relational:MaxIdentifierLength: 128
+RelationshipDiscoveryConvention:InverseNavigationCandidates: System.Collections.Generic.Dictionary`2[System.Type,System.Collections.Generic.SortedSet`1[System.Type]]
+SqlServer:ValueGenerationStrategy: IdentityColumn" Category="Model" Group="Expanded" />
+<Node Id = "Author" Label="Author" Name="Author" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Authors
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Companion" Label="Companion" Name="Companion" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Companions
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Author.AuthorId" Label="AuthorId (int)" Name="AuthorId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Author.Episodes" Label="Episodes (*)" Name="Episodes" Category="Navigation Collection" Type="List&lt;Episode&gt;"  Field="" Dependent="Episode" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Author.AuthorName" Label="AuthorName (string)" Name="AuthorName" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Doctor" Label="Doctor" Name="Doctor" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Doctors
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Companion.CompanionId" Label="CompanionId (int)" Name="CompanionId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Companion.EpisodeCompanions" Label="EpisodeCompanions (*)" Name="EpisodeCompanions" Category="Navigation Collection" Type="List&lt;EpisodeCompanion&gt;"  Field="" Dependent="EpisodeCompanion" Principal="" Inverse="Companion" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Companion.CompanionName" Label="CompanionName (string)" Name="CompanionName" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Companion.WhoPlayed" Label="WhoPlayed (string)" Name="WhoPlayed" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Enemy" Label="Enemy" Name="Enemy" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Enemies
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Doctor.DoctorId" Label="DoctorId (int)" Name="DoctorId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Doctor.Episodes" Label="Episodes (*)" Name="Episodes" Category="Navigation Collection" Type="List&lt;Episode&gt;"  Field="" Dependent="Episode" Principal="" Inverse="" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Doctor.BirthDate" Label="BirthDate (DateTime?)" Name="BirthDate" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: Null" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Doctor.DoctorName" Label="DoctorName (string)" Name="DoctorName" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Doctor.DoctorNumber" Label="DoctorNumber (int)" Name="DoctorNumber" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Doctor.FirstEpisodeDate" Label="FirstEpisodeDate (DateTime?)" Name="FirstEpisodeDate" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: Null" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Doctor.LastEpisodeDate" Label="LastEpisodeDate (DateTime?)" Name="LastEpisodeDate" Category="Property Optional" Type="DateTime?" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: Null" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Episode" Label="Episode" Name="Episode" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: Episodes
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Enemy.EnemyId" Label="EnemyId (int)" Name="EnemyId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Enemy.EpisodeEnemies" Label="EpisodeEnemies (*)" Name="EpisodeEnemies" Category="Navigation Collection" Type="List&lt;EpisodeEnemy&gt;"  Field="" Dependent="EpisodeEnemy" Principal="" Inverse="Enemy" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Enemy.Description" Label="Description (string)" Name="Description" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: Null" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Enemy.EnemyName" Label="EnemyName (string)" Name="EnemyName" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "EpisodeCompanion" Label="EpisodeCompanion" Name="EpisodeCompanion" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: EpisodeCompanions
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "Episode.EpisodeId" Label="EpisodeId (int)" Name="EpisodeId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Episode.EpisodeCompanions" Label="EpisodeCompanions (*)" Name="EpisodeCompanions" Category="Navigation Collection" Type="List&lt;EpisodeCompanion&gt;"  Field="" Dependent="EpisodeCompanion" Principal="" Inverse="Episode" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Episode.EpisodeEnemies" Label="EpisodeEnemies (*)" Name="EpisodeEnemies" Category="Navigation Collection" Type="List&lt;EpisodeEnemy&gt;"  Field="" Dependent="EpisodeEnemy" Principal="" Inverse="Episode" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "Episode.AuthorId" Label="AuthorId (int)" Name="AuthorId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Episode.DoctorId" Label="DoctorId (int)" Name="DoctorId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Episode.EpisodeDate" Label="EpisodeDate (DateTime)" Name="EpisodeDate" Category="Property Required" Type="DateTime" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:DefaultValueSql: Null" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Episode.EpisodeNumber" Label="EpisodeNumber (int)" Name="EpisodeNumber" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Episode.EpisodeType" Label="EpisodeType (string)" Name="EpisodeType" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Episode.Notes" Label="Notes (string)" Name="Notes" Category="Property Optional" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="Relational:ColumnType: varchar(600)
+Relational:DefaultValueSql: Null" IsPrimaryKey="False" IsForeignKey="False" IsRequired="False" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "Episode.SeriesNumber" Label="SeriesNumber (int)" Name="SeriesNumber" Category="Property Required" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "Episode.Title" Label="Title (string)" Name="Title" Category="Property Required" Type="string" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "EpisodeEnemy" Label="EpisodeEnemy" Name="EpisodeEnemy" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="Relational:TableName: EpisodeEnemies
+RelationshipDiscoveryConvention:NavigationCandidates: System.Collections.Immutable.ImmutableSortedDictionary`2[System.Reflection.PropertyInfo,System.ValueTuple`2[System.Type,System.Nullable`1[System.Boolean]]]" Category="EntityType" Group="Expanded" />
+<Node Id = "EpisodeCompanion.EpisodeCompanionId" Label="EpisodeCompanionId (int)" Name="EpisodeCompanionId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "EpisodeCompanion.Companion" Label="Companion (1)" Name="Companion" Category="Navigation Property" Type="Companion"  Field="" Dependent="" Principal="Companion" Inverse="EpisodeCompanions" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "EpisodeCompanion.Episode" Label="Episode (1)" Name="Episode" Category="Navigation Property" Type="Episode"  Field="" Dependent="" Principal="Episode" Inverse="EpisodeCompanions" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "EpisodeCompanion.CompanionId" Label="CompanionId (int)" Name="CompanionId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "EpisodeCompanion.EpisodeId" Label="EpisodeId (int)" Name="EpisodeId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "EpisodeEnemy" Label="EpisodeEnemy" Name="EpisodeEnemy" BaseClass="" IsAbstract="False" ChangeTrackingStrategy="ChangeTrackingStrategy.Snapshot"  Annotations="" Category="EntityType" Group="Expanded" />
+<Node Id = "EpisodeEnemy.EpisodeEnemyId" Label="EpisodeEnemyId (int)" Name="EpisodeEnemyId" Category="Property Primary" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="SqlServer:ValueGenerationStrategy: IdentityColumn" IsPrimaryKey="True" IsForeignKey="False" IsRequired="True" IsIndexed="False" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="ValueGenerated.OnAdd" />
+<Node Id = "EpisodeEnemy.Enemy" Label="Enemy (1)" Name="Enemy" Category="Navigation Property" Type="Enemy"  Field="" Dependent="" Principal="Enemy" Inverse="EpisodeEnemies" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "EpisodeEnemy.Episode" Label="Episode (1)" Name="Episode" Category="Navigation Property" Type="Episode"  Field="" Dependent="" Principal="Episode" Inverse="EpisodeEnemies" PropertyAccessMode="PropertyAccessMode.Default" />
+<Node Id = "EpisodeEnemy.EnemyId" Label="EnemyId (int)" Name="EnemyId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+<Node Id = "EpisodeEnemy.EpisodeId" Label="EpisodeId (int)" Name="EpisodeId" Category="Property Foreign" Type="int" MaxLength="None" Field="" PropertyAccessMode="PropertyAccessMode.Default" BeforeSaveBehavior="PropertySaveBehavior.Save" AfterSaveBehavior="PropertySaveBehavior.Save" Annotations="" IsPrimaryKey="False" IsForeignKey="True" IsRequired="True" IsIndexed="True" IsShadow="False" IsAlternateKey="False" IsConcurrencyToken="False" IsUnicode="True" ValueGenerated="None" />
+  </Nodes>
+  <Links>
+<Link Source = "IModel" Target="Author" Category="Contains" />
+<Link Source = "IModel" Target="Companion" Category="Contains" />
+<Link Source = "Author" Target="Author.Episodes" Category="Contains" />
+<Link Source = "Author" Target="Author.AuthorId" Category="Contains" />
+<Link Source = "Author" Target="Author.AuthorName" Category="Contains" />
+<Link Source = "IModel" Target="Doctor" Category="Contains" />
+<Link Source = "Companion" Target="Companion.EpisodeCompanions" Category="Contains" />
+<Link Source = "Companion" Target="Companion.CompanionId" Category="Contains" />
+<Link Source = "Companion" Target="Companion.CompanionName" Category="Contains" />
+<Link Source = "Companion" Target="Companion.WhoPlayed" Category="Contains" />
+<Link Source = "IModel" Target="Enemy" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.Episodes" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.DoctorId" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.BirthDate" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.DoctorName" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.DoctorNumber" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.FirstEpisodeDate" Category="Contains" />
+<Link Source = "Doctor" Target="Doctor.LastEpisodeDate" Category="Contains" />
+<Link Source = "IModel" Target="Episode" Category="Contains" />
+<Link Source = "Enemy" Target="Enemy.EpisodeEnemies" Category="Contains" />
+<Link Source = "Enemy" Target="Enemy.EnemyId" Category="Contains" />
+<Link Source = "Enemy" Target="Enemy.Description" Category="Contains" />
+<Link Source = "Enemy" Target="Enemy.EnemyName" Category="Contains" />
+<Link Source = "IModel" Target="EpisodeCompanion" Category="Contains" />
+<Link Source = "Episode" Target="Episode.EpisodeCompanions" Category="Contains" />
+<Link Source = "Episode" Target="Episode.EpisodeEnemies" Category="Contains" />
+<Link Source = "Episode" Target="Episode.EpisodeId" Category="Contains" />
+<Link Source="Episode" Target="Author" From="Episode.AuthorId" To="Author.AuthorId" Name="Episode -> Author" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source="Episode" Target="Doctor" From="Episode.DoctorId" To="Doctor.DoctorId" Name="Episode -> Doctor" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "Episode" Target="Episode.AuthorId" Category="Contains" />
+<Link Source = "Episode" Target="Episode.DoctorId" Category="Contains" />
+<Link Source = "Episode" Target="Episode.EpisodeDate" Category="Contains" />
+<Link Source = "Episode" Target="Episode.EpisodeNumber" Category="Contains" />
+<Link Source = "Episode" Target="Episode.EpisodeType" Category="Contains" />
+<Link Source = "Episode" Target="Episode.Notes" Category="Contains" />
+<Link Source = "Episode" Target="Episode.SeriesNumber" Category="Contains" />
+<Link Source = "Episode" Target="Episode.Title" Category="Contains" />
+<Link Source = "IModel" Target="EpisodeEnemy" Category="Contains" />
+<Link Source = "EpisodeCompanion" Target="EpisodeCompanion.Companion" Category="Contains" />
+<Link Source = "EpisodeCompanion" Target="EpisodeCompanion.Episode" Category="Contains" />
+<Link Source = "EpisodeCompanion" Target="EpisodeCompanion.EpisodeCompanionId" Category="Contains" />
+<Link Source="EpisodeCompanion" Target="Companion" From="EpisodeCompanion.CompanionId" To="Companion.CompanionId" Name="EpisodeCompanion -> Companion" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source="EpisodeCompanion" Target="Episode" From="EpisodeCompanion.EpisodeId" To="Episode.EpisodeId" Name="EpisodeCompanion -> Episode" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "EpisodeCompanion" Target="EpisodeCompanion.CompanionId" Category="Contains" />
+<Link Source = "EpisodeCompanion" Target="EpisodeCompanion.EpisodeId" Category="Contains" />
+<Link Source = "IModel" Target="EpisodeEnemy" Category="Contains" />
+<Link Source = "EpisodeEnemy" Target="EpisodeEnemy.Enemy" Category="Contains" />
+<Link Source = "EpisodeEnemy" Target="EpisodeEnemy.Episode" Category="Contains" />
+<Link Source = "EpisodeEnemy" Target="EpisodeEnemy.EpisodeEnemyId" Category="Contains" />
+<Link Source="EpisodeEnemy" Target="Enemy" From="EpisodeEnemy.EnemyId" To="Enemy.EnemyId" Name="EpisodeEnemy -> Enemy" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source="EpisodeEnemy" Target="Episode" From="EpisodeEnemy.EpisodeId" To="Episode.EpisodeId" Name="EpisodeEnemy -> Episode" Annotations="" IsUnique="False" Label="1:*" Category="Foreign Key" />
+<Link Source = "EpisodeEnemy" Target="EpisodeEnemy.EnemyId" Category="Contains" />
+<Link Source = "EpisodeEnemy" Target="EpisodeEnemy.EpisodeId" Category="Contains" />
+  </Links>
+  <Styles>
+    <Style TargetType="Node" GroupLabel="EntityType" ValueLabel="True">
+      <Condition Expression="HasCategory('EntityType')" />
+      <Setter Property="Background" Value="#FFC0C0C0" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Primary" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Primary')" />
+      <Setter Property="Background" Value="#FF008000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Optional" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Optional')" />
+      <Setter Property="Background" Value="#FF808040" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Foreign" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Foreign')" />
+      <Setter Property="Background" Value="#FF8080FF" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Property Required" ValueLabel="True">
+      <Condition Expression="HasCategory('Property Required')" />
+      <Setter Property="Background" Value="#FFC0A000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Property" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Property')" />
+      <Setter Property="Background" Value="#FF990000" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Navigation Collection" ValueLabel="True">
+      <Condition Expression="HasCategory('Navigation Collection')" />
+      <Setter Property="Background" Value="#FFFF3232" />
+    </Style>
+    <Style TargetType="Node" GroupLabel="Model" ValueLabel="True">
+      <Condition Expression="HasCategory('Model')" />
+      <Setter Property="Background" Value="#FFFFFFFF" />
+    </Style>
+  </Styles>
+  <Properties>
+    <Property Id="Name" Group="Model Properties" DataType="System.String" />
+    <Property Id="Field"  Description="Backing field" Group="Model Properties" DataType="System.String" />
+    <Property Id="Type"  Description="CLR data type" Group="Model Properties" DataType="System.String" />
+    <Property Id="To" Description="Source property" Group="Model Properties" DataType="System.String" />
+    <Property Id="From" Description="Target property" Group="Model Properties" DataType="System.String" />
+    <Property Id="Dependent" Description="Dependent entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Inverse" Description="Inverse entity" Group="Model Properties" DataType="System.String" />
+    <Property Id="Principal" Description="Principal entity" Group="Model Properties" DataType="System.String" />    
+    <Property Id="Annotations" Description="Annotations" Group="Model Properties" DataType="System.String" />
+    <Property Id="BaseClass"  Description="Base class" Group="Model Properties" DataType="System.String" />
+    <Property Id="ChangeTrackingStrategy" Description="Change tracking strategy" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsUnique" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="IsAbstract" Group="Model Properties" DataType="System.Boolean" />
+    <Property Id="ProductVersion" Label="Product Version" Description="EF Core product version" Group="Model Properties" DataType="System.String" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsRequired" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsPrimaryKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsForeignKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsShadow" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsAlternateKey" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsConcurrencyToken" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsIndexed" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="IsUnicode" Group="Property Flags" DataType="System.Boolean" />
+    <Property Id="ValueGenerated" Group="Property Flags" DataType="System.String" />
+    <Property Id="BeforeSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="AfterSaveBehavior" Group="Property Flags" DataType="System.String" />
+    <Property Id="PropertyAccessMode" Group="Property Flags" DataType="System.String" />
+  </Properties>
+</DirectedGraph>
